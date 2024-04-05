@@ -1,0 +1,58 @@
+.t-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.t-wrapper__padding {
+  padding-top: 20px;
+}
+
+.container {
+  max-width: 1380px;
+  margin: 0px auto;
+}
+
+.router {
+  position: absolute;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+.router__symbol {
+  font-size: 6em;
+}
+.router__block {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  padding-bottom: 10px;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+}
+.list__content {
+  display: flex;
+  flex-direction: column;
+  min-width: 390px;
+}
+
+.roulette__content {
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+}/*# sourceMappingURL=style.css.map */

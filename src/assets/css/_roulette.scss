@@ -1,0 +1,10 @@
+.roulette{
+    &__content{
+        max-width: 300px;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,7 @@
+.t-wrapper {
+  display: flex;
+  max-width: 800px;
+}
+.t-wrapper__padding {
+  padding-top: 20px;
+}/*# sourceMappingURL=t-wrapper.css.map */
