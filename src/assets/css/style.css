@@ -48,11 +48,15 @@
   min-width: 390px;
 }
 
-.roulette__content {
-  max-width: 300px;
+.roulette {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.roulette__content {
   margin-top: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  flex-direction: column;
+  max-width: 300px;
+  padding: 20px;
 }/*# sourceMappingURL=style.css.map */

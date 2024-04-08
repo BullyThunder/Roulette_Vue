@@ -5,7 +5,9 @@ export default createStore({
     array_roullete:[]
   },
   getters: {
-
+    getItems (state){
+      return state.array_roullete
+    }
   },
   mutations: {
     add_to_Roullete (state,item){

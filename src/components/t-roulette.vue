@@ -1,40 +1,28 @@
 <template>
-  <div>
-    <span>It`s roullete</span>
-  </div>
   <div class="roulette">
-    <div v-for="(items,index) in add_to_Roullete" :key="index" class="roulette__content">
-    <span>
-      content: {{ $store.state.array_roullete }}
-    </span>
-    </div>
+    <span>It`s roullete</span>
+    <div v-for="item in rouletteItems" :key="item.id" class="roulette__content">
+    <span >{{ item.content }}</span>
+  </div>
   </div>
   <div>
-    <router-link :to="{name: 'Wrapper'}">To Wrapper</router-link> 
+    <router-link :to="{ name: 'Wrapper' }">To Wrapper</router-link> 
   </div>
 </template>
 
 <script setup>
-import { useStore,mapState } from 'vuex';
-import { defineComponent, ref, onMounted } from 'vue';
-defineComponent({
+import { useStore } from 'vuex';
+import { defineComponent, computed } from 'vue';
 
-    name: 'tRoulette',
-    props: {
-      array_to_roulette :{
-      type: Array,
-      required: true
-    },
-    },
-    setup () {
-  const props = defineProps({
-    array_to_roulette: Array
-  });
-}
-})
-  
+const store = useStore();
+
+const rouletteItems = computed(() => store.getters.getItems);
+
+const addToRoullete = (item) => {
+  store.commit('add_to_Roullete', item);
+};
 </script>
 
 <style>
-
+/* Стили */
 </style>
