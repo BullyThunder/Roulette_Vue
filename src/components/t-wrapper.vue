@@ -23,7 +23,7 @@
         </div>
         <div class="buttons">
           <button @click="addToRoullete(item)" class="button is-success is-light">Add to Roulette</button>
-          <button @click="deleteFromWrap(index)" class="button is-danger">Delete</button>
+          <button @click="deleteFromWrap(list,index)" class="button is-danger">Delete</button>
         </div>
       </div>
     </div>
@@ -53,7 +53,7 @@ const addToList = (list) => {
   newItemContent.value = '';
 }
 
-const deleteFromWrap = (index) => {
+const deleteFromWrap = (list,index) => {
   list.splice(index, 1);
 }
 

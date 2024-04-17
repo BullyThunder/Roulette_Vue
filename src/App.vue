@@ -32,4 +32,41 @@ nav {
     }
   }
 }
+.slice-0 {  
+  left: 50%;
+  background-color: blue;
+}
+
+.slice-1 {
+  background-color: red;
+  transform: rotate(45deg);
+}
+.slice-2 {
+  background-color: orange;
+  transform: rotate(90deg);
+}
+.slice-3 {
+  background-color: white;
+  transform: rotate(135deg);
+}
+.slice-5 {
+  background-color: gold;
+  transform: rotate(180deg);
+}
+.slice-6 {
+  background-color: hotpink;
+  transform: rotate(215deg);
+}
+.slice-7 {
+  background-color: green;
+  transform: rotate(250deg);
+}
+.slice-8 {
+  background-color: cyan;
+  transform: rotate(285deg);
+}
+.slice-9 {
+  background-color: indigo;
+  transform: rotate(320deg);
+}
 </style>

@@ -11,8 +11,8 @@ export default createStore({
   },
   mutations: {
     add_to_Roullete (state,item){
-      state.array_roullete.push(item)
-    }
+      state.array_roullete.push({...item, class: `slice-${state.array_roullete.length}`});
+    },
   },
   actions: {
   },
