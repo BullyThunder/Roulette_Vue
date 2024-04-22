@@ -49,24 +49,28 @@ nav {
   background-color: white;
   transform: rotate(135deg);
 }
+.slice-4{
+  background-color: #FF00FF;
+  transform: rotate(180deg);
+}
 .slice-5 {
   background-color: gold;
-  transform: rotate(180deg);
+  transform: rotate(215deg);
 }
 .slice-6 {
   background-color: hotpink;
-  transform: rotate(215deg);
+  transform: rotate(250deg);
 }
 .slice-7 {
   background-color: green;
-  transform: rotate(250deg);
+  transform: rotate(285deg);
 }
 .slice-8 {
   background-color: cyan;
-  transform: rotate(285deg);
+  transform: rotate(320deg);
 }
 .slice-9 {
   background-color: indigo;
-  transform: rotate(320deg);
+  transform: rotate(365deg);
 }
 </style>
