@@ -19,7 +19,10 @@ const App = defineComponent({
   text-align: center;
   color: #2c3e50;
 }
-
+body{
+  padding: 0;
+  margin: 0;
+}
 nav {
   padding: 30px;
 
@@ -39,38 +42,42 @@ nav {
 
 .slice-1 {
   background-color: red;
-  transform: rotate(45deg);
+  transform: rotate(36deg);
 }
 .slice-2 {
   background-color: orange;
-  transform: rotate(90deg);
+  transform: rotate(72deg);
 }
 .slice-3 {
   background-color: white;
-  transform: rotate(135deg);
+  transform: rotate(108deg);
 }
 .slice-4{
   background-color: #FF00FF;
-  transform: rotate(180deg);
+  transform: rotate(144deg);
 }
 .slice-5 {
   background-color: gold;
-  transform: rotate(215deg);
+  transform: rotate(180deg);
 }
 .slice-6 {
   background-color: hotpink;
-  transform: rotate(250deg);
+  transform: rotate(216deg);
 }
 .slice-7 {
   background-color: green;
-  transform: rotate(285deg);
+  transform: rotate(252deg);
 }
 .slice-8 {
   background-color: cyan;
-  transform: rotate(320deg);
+  transform: rotate(288deg);
 }
 .slice-9 {
   background-color: indigo;
-  transform: rotate(365deg);
+  transform: rotate(324deg);
+}
+.slice-10 {
+  background-color: #FFE4C4	;
+  transform: rotate(360deg);
 }
 </style>

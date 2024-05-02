@@ -3,11 +3,12 @@
     margin: 0px auto;
 }
 .router{
-    position: absolute;
     right: 30px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     padding-top: 10px;
+    justify-content: end;
+    padding-right: 10px;
     &__symbol{
         font-size: 6em;
         color: green;
@@ -17,9 +18,25 @@
         flex-direction: column;
     }
 }
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+body{
+    background-color: antiquewhite;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
 .buttons{
     display: flex;
     justify-content: center;
     margin: 10px;
     padding-bottom: 10px;
 }
+@media screen and (min-width: 1408px) {
+        .container:not(.is-max-desktop):not(.is-max-widescreen) {
+            max-width: none;
+        }
+    }

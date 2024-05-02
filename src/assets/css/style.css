@@ -7,6 +7,14 @@
 .t-wrapper__padding {
   padding-top: 20px;
 }
+.t-wrapper__image {
+  transform: rotate(90deg);
+  left: -1px;
+}
+.t-wrapper__block {
+  display: flex;
+  justify-content: space-between;
+}
 
 .container {
   max-width: 1380px;
@@ -14,11 +22,12 @@
 }
 
 .router {
-  position: absolute;
   right: 30px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding-top: 10px;
+  justify-content: end;
+  padding-right: 10px;
 }
 .router__symbol {
   font-size: 6em;
@@ -29,6 +38,19 @@
   flex-direction: column;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background-color: antiquewhite;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 .buttons {
   display: flex;
   justify-content: center;
@@ -36,6 +58,11 @@
   padding-bottom: 10px;
 }
 
+@media screen and (min-width: 1408px) {
+  .container:not(.is-max-desktop):not(.is-max-widescreen) {
+    max-width: none;
+  }
+}
 .list {
   display: flex;
   justify-content: center;
@@ -51,7 +78,6 @@
 
 .roulette {
   display: flex;
-  background-color: antiquewhite;
   justify-content: center;
   align-items: center;
   flex-direction: column;

@@ -6,4 +6,12 @@
     &__padding{
         padding-top: 20px;
     }
+    &__image{
+        transform: rotate(90deg);
+        left: -1px;
+    }
+    &__block{
+        display: flex;
+        justify-content: space-between;
+    }
 }

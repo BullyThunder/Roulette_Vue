@@ -9,6 +9,8 @@
   </div>
   <div id="app" class="container">
     <div class="t-wrapper t-wrapper__padding">
+      <div class="t-wrapper__block">
+    <div>
       <div class="field is-grouped">
         <p class="control is-expanded">
           <input v-model="newItemContent" class="input" type="text" placeholder="">
@@ -25,6 +27,8 @@
           <button @click="addToRoullete(item)" class="button is-success is-light">Add to Roulette</button>
           <button @click="deleteFromWrap(list,index)" class="button is-danger">Delete</button>
         </div>
+        </div>
+      </div>
       </div>
     </div>
   </div>
