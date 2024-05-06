@@ -6,7 +6,7 @@
       <div v-for="item in rouletteItems" :key="item.id" :class="[item.class]" :style="{ transform: `rotate(${item.angle}deg)` }">{{ item.content }}</div>
     </div>
     <div class="roulette__spin">
-      <button @click="spinRoulette()">Spin</button>
+      <button class="button is-success is-dark" @click="spinRoulette">Spin</button>
     </div>
   </div>
   <div>
@@ -20,10 +20,10 @@ import { ref } from 'vue';
 
 const store = useStore();
 
-const rouletteItems = store.getters.getItems.map((item, index) => ({
+const rouletteItems = store.getters.getItems.map((item,index) => ({ 
   ...item,
-  angle: index * (360 / store.getters.getItems.length), // Рассчитываем угол для каждого элемента
-}));
+  angle: index * (360/store.getters.getItems.length),
+}))
 let rouletteContainer = ref(null);
 
 const spinRoulette = () => {
@@ -33,9 +33,11 @@ const spinRoulette = () => {
   rouletteContainer.value.style.transform = `rotate(${rpm + num}deg)`; // Добавляем случайное число к углу вращения
   setTimeout(() => {
     const rotation_angle = (rpm + num) % 360; // Вычисляем угол поворота, учитывая случайное число
-    const index_Of_element = Math.floor((rotation_angle / (360 / rouletteItems.length)));
+    let normalized_angle = (360 - rotation_angle) % 360; // Нормализуем угол, чтобы он был от 0 до 360
+    if (normalized_angle < 0) normalized_angle += 360; // Обрабатываем отрицательные углы
+    const index_Of_element = Math.ceil((normalized_angle / (360 / rouletteItems.length)));
     const Selected_element = rouletteItems[index_Of_element].content;
-    alert(Selected_element);
+    alert(Selected_element.content);
   }, 5000); // Время анимации
 }
 </script>
