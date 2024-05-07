@@ -43,7 +43,7 @@ const spinRoulette = () => {
     const rotation_angle = (rpm + num) % 360; // Вычисляем угол поворота, учитывая случайное число
     let normalized_angle = (360 - rotation_angle) % 360; // Нормализуем угол, чтобы он был от 0 до 360
     if (normalized_angle < 0) normalized_angle += 360; // Обрабатываем отрицательные углы
-    const index_Of_element = Math.ceil(Math.ceil(normalized_angle / (360 / rouletteItems.length)));
+    const index_Of_element = Math.round((normalized_angle / (360 / rouletteItems.length)));
     const Selected_element = rouletteItems[index_Of_element].content;
     popup.querySelector('span').textContent = `Your task is ${Selected_element}`;
     popup.style.display = 'flex'; // Показать модальное окно
