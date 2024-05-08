@@ -41,11 +41,6 @@ import { defineComponent, ref, computed } from 'vue';
 const store = useStore();
 const newItemContent = ref('');
 const list = ref([
-  {
-    id: 1,
-    content: 'off tv',
-    active: false,
-  }
 ]);
 
 const addToList = (list) => {

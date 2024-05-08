@@ -1,6 +1,11 @@
 <template>
   <div class="roulette">
-    <span>It's roulette</span>
+    <div class="roulette__top">
+    <span class="roulette__title">It's roulette</span>
+  </div>
+  <div class="roulette__wrapper">
+      <router-link :to="{ name: 'Wrapper' }">To Wrapper</router-link> 
+    </div>
     <span class="roulette__arrow">&#11015;</span>
     <div class="roulette__container" ref="rouletteContainer">
       <div v-for="item in rouletteItems" :key="item.id" :class="[item.class]" :style="{ transform: `rotate(${item.angle}deg)` }">{{ item.content }}</div>
@@ -12,9 +17,6 @@
     <div class="roulette__spin">
       <button class="button is-success is-dark" @click="spinRoulette">Spin</button>
     </div>
-  </div>
-  <div>
-    <router-link :to="{ name: 'Wrapper' }">To Wrapper</router-link> 
   </div>
 </template>
 
